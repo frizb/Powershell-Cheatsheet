@@ -1,6 +1,17 @@
 # Powershell-Cheatsheet
-Hand list of Powershell commands frequently used during penetration tests
+Hand list of Powershell commands frequently used during penetration tests / OSCP
 
+## Check the Powershell Version
+
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex get-host"
+```
+
+## Test if you can run PowerShell Version 2
+
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -Version 2 -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "$PSVersionTable"
+```
 
 ## Execute Remote Powershell from windows command prompt
 
